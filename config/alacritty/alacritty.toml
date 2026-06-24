@@ -1,0 +1,34 @@
+[font]
+size = 18
+
+  [font.normal]
+  family = "Inconsolata Nerd Font Mono"
+  style = "Regular"
+  #family = "monospace"
+  #style = "Bold"
+
+
+[colors.primary]
+background = "0x1d1825"
+foreground = "0xc4b9a6"
+
+[colors.normal]
+black   = "0x1d1825"
+red     = "0xc25c73"
+green   = "0x51764c"
+yellow  = "0xb7a268"
+blue    = "0x4d5b68"
+magenta = "0x89758a"
+cyan    = "0x566b6c"
+white   = "0xc4b9a6"
+
+[colors.bright]
+black   = "0x35303d"
+red     = "0xbf7787"
+green   = "0x92b25a"
+yellow  = "0xf5dd90"
+blue    = "0x84b3c1"
+magenta = "0xac72ab"
+cyan    = "0x86898a"
+white   = "0xe3dbcf"
+

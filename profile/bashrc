@@ -1,0 +1,19 @@
+#
+# ~/.bashrc
+#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+ 
+alias ls='ls -l --color=auto'
+PS1='[\[\033[0;31m\]\u\[\033[0m\]@\[\033[0;36m\]\h\[\033[0m\] \W]\$ '
+
+alias surf='tabbed surf -e'
+alias btop='btop --utf-force'
+alias feh='feh --force-aliasing'
+alias rtc='watch -n 1 date +%r'
+alias df='df -h -x tmpfs'
+alias flameshot='flameshot gui'
+alias nim='nvim'
+alias vim='nvim' # because i'm not going to fix my muscle memory
+

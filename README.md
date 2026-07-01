@@ -1,4 +1,4 @@
 # configs
 
-Neovim and Hyprland configs
+Configs for setting up a custom Linux environment.
 

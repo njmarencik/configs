@@ -1,0 +1,6 @@
+[user]
+	email = user@example.com
+	name = user
+
+[includeIf "gitdir:~/repos/njmarencik/"]
+	path = ~/.gitconfig-njmarencik

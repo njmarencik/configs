@@ -23,10 +23,10 @@ mkdir -p $HOME/.config
 cp config/* $HOME/.config
 
 echo "///Moving dotfile profiles..."
-cp profile/bash_profile $HOME/.bash_profile
-cp profile/bashrc $HOME/.bashrc
-cp gitconfig $HOME/.gitconifig
-cp gitconfig-njmarencik $HOME/.gitconfig-njmarencik
+cp -r profile/bash_profile $HOME/.bash_profile
+cp -r profile/bashrc $HOME/.bashrc
+cp -r gitconfig $HOME/.gitconfig
+cp -r gitconfig-njmarencik $HOME/.gitconfig-njmarencik
 
 echo "///Setting up workspace..."
 mkdir ~/Screenshots

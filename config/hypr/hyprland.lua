@@ -15,12 +15,69 @@
 ------------------
 
 -- See https://wiki.hypr.land/Configuring/Basics/Monitors/
-hl.monitor({
-    output   = "",
-    mode     = "preferred",
-    position = "auto",
-    scale    = "auto",
-})
+--hl.monitor({
+--    output   = "",
+--    mode     = "preferred",
+--    position = "auto",
+--    scale    = "auto",
+--})
+
+
+
+------------------
+---- MONITORS ----
+------------------
+
+-- The laptop's internal display.
+local laptopMonitor = "eDP-1"
+
+-- Configure monitors whenever the monitor layout changes.
+local function configureMonitors()
+    local monitors = hl.get_monitors()
+    local externalMonitor = nil
+
+    -- Find the first monitor that isn't the laptop display.
+    for _, monitor in ipairs(monitors) do
+        if monitor.name ~= laptopMonitor then
+            externalMonitor = monitor
+            break
+        end
+    end
+
+    if externalMonitor then
+        -- External display connected:
+        -- disable the laptop display.
+        hl.monitor({
+            output = laptopMonitor,
+            disabled = true,
+        })
+
+        -- Use the external display as the only active display.
+        hl.monitor({
+            output = externalMonitor.name,
+            mode = "preferred",
+            position = "0x0",
+            scale = "auto",
+        })
+    else
+        -- No external display connected:
+        -- use the laptop display.
+        hl.monitor({
+            output = laptopMonitor,
+            mode = "preferred",
+            position = "0x0",
+            scale = "auto",
+        })
+    end
+end
+
+-- Configure monitors when Hyprland starts.
+hl.on("hyprland.start", configureMonitors)
+
+-- Reconfigure when a monitor is connected or disconnected.
+hl.on("monitor.added", configureMonitors)
+hl.on("monitor.removed", configureMonitors)
+
 
 
 ---------------------

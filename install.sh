@@ -20,7 +20,7 @@ systemctl --user enable --now pipewire pipewire-pulse wireplumber
 
 echo "///Moving config files..."
 mkdir -p $HOME/.config
-cp config/* $HOME/.config
+cp -r config/* $HOME/.config
 
 echo "///Moving dotfile profiles..."
 cp -r profile/bash_profile $HOME/.bash_profile

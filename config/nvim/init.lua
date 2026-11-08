@@ -16,6 +16,12 @@ vim.api.nvim_create_autocmd('BufReadPost', {
   end,
 })
 
+-- Convert tabs to spaces
+vim.opt.expandtab = true
+vim.opt.shiftwidth = 4
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+
 -- Set terminal color support to 16 (again, this is duplicated)
 vim.o.termguicolors = true
 

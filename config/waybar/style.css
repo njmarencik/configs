@@ -2,7 +2,7 @@
     /* `otf-font-awesome` is required to be installed for icons */
     /*font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;*/
     font-family: DejaVu, sans-serif, bold, mono;
-    padding: 2px /* workspace width */px;
+    font-size: /*font size*/px;
     color: #c4b9a6;
     font-weight: bold;
 }
